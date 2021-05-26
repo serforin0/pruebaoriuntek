@@ -1,0 +1,14 @@
+<%- include('header') -%>
+
+<h1>Editar Empresas</h1>
+
+<form action="/editar/<%=modelo.empresa_ID %>" method="POST">
+    <div class="form-horizontal">
+        <%- include('plantillaCrear') -%>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-2"></label>
+                <div class="col-sm-10"></div>
+                <input type="submit" value="actualizar" class="btn btn-default btn-success" />
+            </div>
+    </div>
+</form>

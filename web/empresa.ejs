@@ -1,0 +1,37 @@
+<%- include('header') -%>
+
+<h1>Empresas <%= modelo.lendht %></h1>
+
+<div class="table-responsive-sm" style="width: 750px">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>hombre de la empresa</th>
+        <th>propietario de la empresa</th>
+        <th>descripcion</th>
+        <th class="d-print-none">CRUD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const empresa of modelo) { %>
+      <tr>
+        <td><%= empresa.nombre %></td>
+
+        <td><%= empresa.Propietario %></td>
+
+        <td><%= empresa.Descripcion%></td>
+
+        <td>
+          <a class="btn btn-sm btn-sucess" href="/crearEmpresa">Nuevo</a>
+        </td>
+        <td>
+          <a class="btn btn-sm btn-warning" href="/editar/:id">Editar</a>
+        </td>
+        <td>
+          <a class="btn btn-sm btn-danger" href="/eliminar">Eliminar</a>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
